@@ -1,0 +1,65 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    defaultConfig {
+        applicationId "com.zero.hcloud"
+        minSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:22.1.1'
+
+    //inject view
+    compile 'com.jakewharton:butterknife:6.1.0'
+
+    //event bus
+    compile 'de.greenrobot:eventbus:2.2.1'
+
+    //newwork and cache
+    compile 'com.squareup.okhttp:okhttp:2.3.0'
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    //json
+    compile 'com.alibaba:fastjson:latest.integration'
+
+    //view
+    compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
+
+    //log util
+    compile 'com.orhanobut:logger:1.10'
+
+    //db
+
+}
+
+
