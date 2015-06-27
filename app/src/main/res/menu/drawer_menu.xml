@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/drawer_home_item"
+            android:title="主页"/>
+        <item android:id="@+id/drawer_person_item"
+        android:title="个人中心"/>
+        <item android:id="@+id/drawer_attention_item"
+            android:title="关注"/>
+        <item android:id="@+id/drawer_find_item"
+            android:title="发现"/>
+        <item android:id="@+id/drawer_message_item"
+            android:title="消息"/>
+        <item android:id="@+id/drawer_schedule_item"
+            android:title="日程"/>
+        <item android:id="@+id/drawer_setting_item"
+            android:title="设置"/>
+        <item android:id="@+id/drawer__item"
+            android:title="关于"/>
+    </group>
+</menu>
