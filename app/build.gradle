@@ -24,42 +24,46 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
 }
-
 
 repositories {
     mavenCentral()
-}
 
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+
+}
 
 dependencies {
 
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:22.1.1'
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.android.support:design:22.2.0'
+    compile 'com.android.support:cardview-v7:22.2.0'
+    compile 'com.android.support:recyclerview-v7:22.2.0'
 
     //inject view
     compile 'com.jakewharton:butterknife:6.1.0'
-
     //event bus
     compile 'de.greenrobot:eventbus:2.2.1'
-
     //newwork and cache
     compile 'com.squareup.okhttp:okhttp:2.3.0'
     compile 'com.squareup.retrofit:retrofit:1.9.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
-
     //json
     compile 'com.alibaba:fastjson:latest.integration'
-
     //view
     compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
-
     //log util
     compile 'com.orhanobut:logger:1.10'
-
+    //img load
+    compile 'com.facebook.fresco:fresco:0.5.2+'
+    //recyclerview
+    compile 'com.malinskiy:superrecyclerview:1.1.0'
+    //great dialog
+    compile 'com.afollestad:material-dialogs:0.7.6.0'
     //db
-
+    compile 'com.j256.ormlite:ormlite-core:4.48'
+    compile 'com.j256.ormlite:ormlite-android:4.48'
 }
 
 

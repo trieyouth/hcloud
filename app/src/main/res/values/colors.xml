@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="window_background">#FFF5F5F5</color>
     <color name="title_color">#FF512DA8</color>
     <color name="slide_color">#FF673AB7</color>
-    <color name="fab_color">#FFFF4081</color>
+    <color name="fab_color">#FF673AB7</color>
 
+    <color name="window_background1">#FFF5F5F5</color>
+    <color name="title_color1">#bb3430</color>
+    <color name="slide_color1">#ea413c</color>
+    <color name="fab_color1">#ea413c</color>
+
+    <color name="window_background2">#FFF5F5F5</color>
+    <color name="title_color2">#006cc3</color>
+    <color name="slide_color2">#0077d6</color>
+    <color name="fab_color2">#0077d6</color>
+
+    <color name="window_background3">#FFF5F5F5</color>
+    <color name="title_color3">#1c7f3e</color>
+    <color name="slide_color3">#2cbd5e</color>
+    <color name="fab_color3">#2cbd5e</color>
 
     <color name="grey_50">#FFFAFAFA</color>
     <color name="grey_100">#FFF5F5F5</color>
