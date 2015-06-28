@@ -10,12 +10,12 @@ import java.util.List;
 /**
  * Created by MyLuffy on 2015/6/27.
  */
-public class MainActivityViewPagerAdapter extends FragmentPagerAdapter {
+public class HomeFragmentViewPagerAdapter extends FragmentPagerAdapter {
 
     private List<android.support.v4.app.Fragment> fragmentList = new ArrayList<>();
     private List<String> titleList = new ArrayList<>();
 
-    public MainActivityViewPagerAdapter(FragmentManager fm) {
+    public HomeFragmentViewPagerAdapter(FragmentManager fm) {
         super(fm);
     }
 

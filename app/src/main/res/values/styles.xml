@@ -1,13 +1,50 @@
 <resources>
 
-    <style name="Theme.MateralDesign" parent="Base.Theme.BaseDesign">
-    </style>
+    <style name="Theme_MateralDesign" parent="Base.Theme.BaseDesign"/>
+    <style name="Theme_MateralDesign1" parent="Base.Theme.BaseDesign1" />
+    <style name="Theme_MateralDesign2" parent="Base.Theme.BaseDesign2"/>
+    <style name="Theme_MateralDesign3" parent="Base.Theme.BaseDesign3"/>
 
     <style name="Base.Theme.BaseDesign" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/slide_color</item>
         <item name="colorPrimaryDark">@color/title_color</item>
         <item name="colorAccent">@color/fab_color</item>
         <item name="android:windowBackground">@color/window_background</item>
+        <item name="android:actionBarStyle">@style/ActionBarStyle</item>
+    </style>
+
+    <style name="Base.Theme.BaseDesign1" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/slide_color1</item>
+        <item name="colorPrimaryDark">@color/title_color1</item>
+        <item name="colorAccent">@color/fab_color1</item>
+        <item name="android:windowBackground">@color/window_background1</item>
+    </style>
+
+    <style name="Base.Theme.BaseDesign2" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/slide_color2</item>
+        <item name="colorPrimaryDark">@color/title_color2</item>
+        <item name="colorAccent">@color/fab_color2</item>
+        <item name="android:windowBackground">@color/window_background2</item>
+    </style>
+
+    <style name="Base.Theme.BaseDesign3" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/slide_color3</item>
+        <item name="colorPrimaryDark">@color/title_color3</item>
+        <item name="colorAccent">@color/fab_color3</item>
+        <item name="android:windowBackground">@color/window_background3</item>
+    </style>
+
+    <style name="ActionBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:titleTextStyle">@style/ActionBar.TitleTextStyle</item>
+        <item name="android:actionOverflowButtonStyle">@style/OverflowButtonStyle</item>
+    </style>
+
+    <style name="OverflowButtonStyle">
+        <item name="android:color">@color/window_background</item>
+    </style>
+
+    <style name="ActionBar.TitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/window_background</item>
     </style>
 
     <style name="Widget.CardContent" parent="android:Widget">
