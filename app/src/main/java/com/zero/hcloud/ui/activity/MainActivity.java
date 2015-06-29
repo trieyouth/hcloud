@@ -163,4 +163,5 @@ public class MainActivity extends BaseActivity {
             ButterKnife.inject(this, view);
         }
     }
+
 }
