@@ -20,7 +20,7 @@ import com.zero.hcloud.ui.fragment.setting.SettingFragment;
 public class AMainModelImpl implements IAMainModel{
 
     @Override
-    public String getToolbarTitle(int resId) {
+    public String getToolbarTitle(int resId)  {
         String str = "";
         switch (resId) {
             case R.id.drawer_home_item:
@@ -48,7 +48,9 @@ public class AMainModelImpl implements IAMainModel{
                 str = ("关于");
                 break;
             default:
-
+                if(str == null) {
+                    throw  new NullPointerException("actionbar title is null");
+                }
                 break;
         }
         return str;
@@ -83,7 +85,9 @@ public class AMainModelImpl implements IAMainModel{
                 fragment = new AboutFragment();
                 break;
             default:
-
+                if(fragment == null){
+                    throw new NullPointerException("fragment is null");
+                }
                 break;
         }
         return fragment;

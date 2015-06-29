@@ -80,11 +80,10 @@ public class MainActivity extends BaseActivity implements IAMain {
     }
 
 
-
     private void initToolbar() {
         setSupportActionBar(toolbar);
         actionBar = getSupportActionBar();
-        actionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
+        actionBar.setHomeAsUpIndicator(R.drawable.ic_menu_white);
         actionBar.setDisplayHomeAsUpEnabled(true);
         actionBar.setTitle("首页");
     }
@@ -96,6 +95,8 @@ public class MainActivity extends BaseActivity implements IAMain {
         navView.addHeaderView(headerView);
         navView.inflateMenu(R.menu.drawer_menu);
     }
+
+
 
     @Override
     public void setToolbarTitle(String title) {
