@@ -3,6 +3,7 @@ package com.zero.hcloud.ui.activity;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
@@ -13,26 +14,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.TextView;
-
 import com.github.siyamed.shapeimageview.CircularImageView;
 import com.zero.hcloud.R;
-import com.zero.hcloud.ui.fragment.BaseFragment;
-import com.zero.hcloud.ui.fragment.about.AboutFragment;
-import com.zero.hcloud.ui.fragment.attention.AttentionFragment;
-import com.zero.hcloud.ui.fragment.find.FindFragment;
-import com.zero.hcloud.ui.fragment.home.HomeFragment;
-import com.zero.hcloud.ui.fragment.message.MessageFragment;
-import com.zero.hcloud.ui.fragment.person.PersonFragment;
-import com.zero.hcloud.ui.fragment.schedule.ScheduleFragment;
-import com.zero.hcloud.ui.fragment.setting.SettingFragment;
-
-import java.util.ArrayList;
-import java.util.List;
-
+import com.zero.hcloud.presenter.AMainPresenter;
+import com.zero.hcloud.ui.IAMain;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements IAMain {
 
 
     @InjectView(R.id.activity_main_drawer_layout)
@@ -45,16 +34,18 @@ public class MainActivity extends BaseActivity {
     Toolbar toolbar;
 
     ActionBar actionBar;
+    private AMainPresenter presenter ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.inject(this);
+        presenter = new AMainPresenter(this);
         initToolbar();
         setupDrawerContent();
         initNav();
-        switchFragment(R.id.drawer_home_item);
+        presenter.loadFragment(R.id.drawer_home_item);
     }
 
     //navView的选中监听，butterknife竟然没有
@@ -64,7 +55,8 @@ public class MainActivity extends BaseActivity {
                     @Override
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
                         menuItem.setChecked(true);
-                        switchFragment(menuItem.getItemId());
+                        presenter.loadFragment(menuItem.getItemId());
+                        presenter.loadToolbarTitle(menuItem.getItemId());
                         drawerLayout.closeDrawers();
                         return true;
                     }
@@ -88,48 +80,6 @@ public class MainActivity extends BaseActivity {
     }
 
 
-    private void switchFragment(int resId) {
-        BaseFragment fragment = null;
-        switch (resId) {
-            case R.id.drawer_home_item:
-                fragment = new HomeFragment();
-                actionBar.setTitle("首页");
-                break;
-            case R.id.drawer_person_item:
-                fragment = new PersonFragment();
-                actionBar.setTitle("个人中心");
-                break;
-            case R.id.drawer_attention_item:
-                fragment = new AttentionFragment();
-                actionBar.setTitle("关注");
-                break;
-            case R.id.drawer_find_item:
-                fragment = new FindFragment();
-                actionBar.setTitle("发现");
-                break;
-            case R.id.drawer_message_item:
-                fragment = new MessageFragment();
-                actionBar.setTitle("消息");
-                break;
-            case R.id.drawer_schedule_item:
-                fragment = new ScheduleFragment();
-                actionBar.setTitle("日程");
-                break;
-            case R.id.drawer_setting_item:
-                fragment = new SettingFragment();
-                actionBar.setTitle("设置");
-                break;
-            case R.id.drawer_about_item:
-                fragment = new AboutFragment();
-                actionBar.setTitle("关于");
-                break;
-            default:
-
-                break;
-        }
-        getSupportFragmentManager().beginTransaction().replace(R.id.activity_main_fragment_container,fragment).commit();
-    }
-
 
     private void initToolbar() {
         setSupportActionBar(toolbar);
@@ -147,12 +97,23 @@ public class MainActivity extends BaseActivity {
         navView.inflateMenu(R.menu.drawer_menu);
     }
 
+    @Override
+    public void setToolbarTitle(String title) {
+        actionBar.setTitle(title);
+    }
+
+    @Override
+    public void changeFragment(Fragment fragment) {
+        getSupportFragmentManager().beginTransaction().replace(R.id.activity_main_fragment_container,fragment).commit();
+    }
+
     /**
      * This class contains all butterknife-injected Views & Layouts from layout file 'nav_header.xml'
      * for easy to all layout elements.
      *
      * @author ButterKnifeZelezny, plugin for Android Studio by Avast Developers (http://github.com/avast)
      */
+
     class NavHeaderViewHolder {
         @InjectView(R.id.drawer_head_img)
         CircularImageView drawerHeadImg;
