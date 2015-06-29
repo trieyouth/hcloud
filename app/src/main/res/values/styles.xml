@@ -1,36 +1,23 @@
 <resources>
 
-    <style name="Theme_MateralDesign" parent="Base.Theme.BaseDesign"/>
-    <style name="Theme_MateralDesign1" parent="Base.Theme.BaseDesign">
-        <item name="colorPrimary">@color/slide_color</item>
-        <item name="colorPrimaryDark">@color/title_color</item>
-        <item name="colorAccent">@color/fab_color</item>
-    </style>
-    <style name="Theme_MateralDesign2" parent="Base.Theme.BaseDesign">
-        <item name="colorPrimary">@color/slide_color1</item>
-        <item name="colorPrimaryDark">@color/title_color1</item>
-        <item name="colorAccent">@color/fab_color1</item>
-    </style>
-    <style name="Theme_MateralDesign3" parent="Base.Theme.BaseDesign">
-        <item name="colorPrimary">@color/slide_color3</item>
-        <item name="colorPrimaryDark">@color/title_color3</item>
-        <item name="colorAccent">@color/fab_color3</item>
-    </style>
 
-    <style name="Base.Theme.BaseDesign" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/slide_color2</item>
-        <item name="colorPrimaryDark">@color/title_color2</item>
-        <item name="colorAccent">@color/fab_color2</item>
-        <item name="android:windowBackground">@color/window_background2</item>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+        <item name="android:textColorPrimaryInverse">@color/textColorPrimaryInverse</item>
+        <item name="android:textColorSecondaryInverse">@color/textColorSecondaryInverse</item>
+        <item name="android:windowBackground">@color/window_background</item>
+        <!-- some other theme configurations for actionbar, overflow menu etc. -->
+        <item name="android:actionOverflowButtonStyle">@style/overflow</item>
     </style>
 
 
-    <style name="Widget.CardContent" parent="android:Widget">
-        <item name="android:paddingLeft">16dp</item>
-        <item name="android:paddingRight">16dp</item>
-        <item name="android:paddingTop">24dp</item>
-        <item name="android:paddingBottom">24dp</item>
-        <item name="android:orientation">vertical</item>
+    <style name="overflow" parent="Base.Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_more_vert_white</item>
     </style>
+
 
 </resources>

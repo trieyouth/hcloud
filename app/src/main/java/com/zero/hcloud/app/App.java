@@ -14,8 +14,7 @@ public class App extends Application {
 
     @Override
     public void onCreate(){
-        Logger.i(TAG,"start");
-        this.setTheme(R.style.Theme_MateralDesign1);
+
     }
 
 }
