@@ -12,6 +12,9 @@
 - compileSdkVersion 22
 - buildToolsVersion "22.0.1"
 
+####项目架构
+ - mvp
+
 ####使用的开源库
 
  - compile 'com.jakewharton:butterknife:6.1.0'
@@ -22,6 +25,11 @@
  - compile 'com.alibaba:fastjson:latest.integration'
  -  compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
  -  compile 'com.orhanobut:logger:1.10'
+ -  compile 'com.facebook.fresco:fresco:0.5.2+
+ -  compile 'com.malinskiy:superrecyclerview:1.1.0'
+ -  compile 'com.afollestad:material-dialogs:0.7.6.0'
+ -   compile 'com.j256.ormlite:ormlite-core:4.48'
+ -  compile 'com.j256.ormlite:ormlite-android:4.48'
 
 ####命名规范
 
