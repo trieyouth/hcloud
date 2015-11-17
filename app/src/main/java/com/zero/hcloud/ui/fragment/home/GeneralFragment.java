@@ -172,7 +172,6 @@ public class GeneralFragment extends BaseFragment implements SwipeRefreshLayout.
             goneError();
         }
         adapter.add(getData());
-
     }
 
     private List<Post> getData(){

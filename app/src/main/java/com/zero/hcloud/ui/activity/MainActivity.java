@@ -1,6 +1,7 @@
 package com.zero.hcloud.ui.activity;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -20,6 +21,7 @@ import com.zero.hcloud.presenter.AMainPresenter;
 import com.zero.hcloud.ui.IAMain;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
+import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity implements IAMain {
 
@@ -122,6 +124,12 @@ public class MainActivity extends BaseActivity implements IAMain {
 
         NavHeaderViewHolder(View view) {
             ButterKnife.inject(this, view);
+        }
+
+        @OnClick(R.id.drawer_head_img)
+        void goPerson(){
+            Intent intent = new Intent(MainActivity.this,PersonActivity.class);
+            startActivity(intent);
         }
     }
 }
