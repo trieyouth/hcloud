@@ -14,6 +14,7 @@ import com.zero.hcloud.ui.fragment.BaseFragment;
  */
 public class PersonFragment extends BaseFragment {
 
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

@@ -7,6 +7,7 @@ import com.zero.hcloud.ui.IAMain;
 /**
  * Created by MyLuffy on 2015/6/29.
  */
+
 public class AMainPresenter {
 
     private IAMain view;
