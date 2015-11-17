@@ -23,6 +23,7 @@ public class HomeFragmentViewPagerAdapter extends FragmentPagerAdapter {
         fragmentList.add(fragment);
         titleList.add(title);
     }
+
     @Override
     public Fragment getItem(int position) {
 

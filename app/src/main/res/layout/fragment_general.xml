@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.gc.materialdesign.views.ProgressBarCircularIndeterminate
+        android:id="@+id/fragment_general_progressbar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_centerInParent="true"
+        android:background="#1E88E5"
+        android:visibility="gone"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+
+        android:id="@+id/fragment_general_swipe_refresh_widget"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_general_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@null"
+            android:scrollbars="vertical" />
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/fragment_general_error"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/fragment_general_error_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="加载错误" />
+
+        <com.gc.materialdesign.views.ButtonRectangle
+            android:id="@+id/fragment_general_reload"
+            android:layout_width="105dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:background="@color/title_color"
+            android:layout_below="@+id/fragment_general_error_info"
+            android:text="重新加载" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

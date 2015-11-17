@@ -22,7 +22,7 @@
     <color name="fab_color3">#2cbd5e</color>
 
 
-
+    <!-- theme -->
     <color name="colorPrimary">#FF9800</color>
     <color name="colorPrimaryDark">#F57C00</color>
     <color name="colorPrimaryLight">#FFE0B2</color>
@@ -34,8 +34,7 @@
     <!-- inverse text color: 87% black-->
     <color name="textColorPrimaryInverse">#DE000000</color>
     <color name="textColorSecondaryInverse">#9E9E9E</color>
-
-
+    <color name="pregressbarColor">#FF5252</color>
 
 
     <color name="grey_50">#FFFAFAFA</color>

@@ -27,18 +27,31 @@ public class HomeFragment extends BaseFragment {
     ViewPager viewpager;
     @InjectView(R.id.fragment_home_fab)
     FloatingActionButton fab;
+    HomeFragmentViewPagerAdapter adapter ;
+
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = getCententView(inflater,R.layout.fragment_home);
         ButterKnife.inject(this, view);
+        addFragment();
+        initViewPager();
+        initTabs();
         return view;
     }
 
     //初始化viewpager
     private void initViewPager() {
-        viewpager.setAdapter(new HomeFragmentViewPagerAdapter(getActivity().getSupportFragmentManager()));
+
+        viewpager.setAdapter(adapter);
+    }
+
+    private void addFragment(){
+        adapter=new HomeFragmentViewPagerAdapter(getActivity().getSupportFragmentManager());
+        adapter.addFragment(new GeneralFragment(),"关注");
+        adapter.addFragment(new GeneralFragment(),"AAAAA");
+        adapter.addFragment(new GeneralFragment(),"BBBBB");
     }
 
     //初始化tabs

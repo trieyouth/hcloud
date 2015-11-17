@@ -18,7 +18,6 @@
         android:id="@+id/drawer_username_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="trieyouth"
-        android:textColor="@color/textColorPrimaryInverse"/>
+        android:text="trieyouth" />
 
 </LinearLayout>

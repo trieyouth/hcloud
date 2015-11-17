@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <android.support.v4.widget.ContentLoadingProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyleInverse"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/_error_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="加载错误"
+        android:visibility="gone"
+        />
+
+    <com.gc.materialdesign.views.ButtonRectangle
+        android:id="@+id/_b"
+        android:layout_width="105dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:background="@color/title_color"
+        android:layout_below="@+id/_error_info"
+        android:text="重新加载" />
+</RelativeLayout>

@@ -97,7 +97,6 @@ public class MainActivity extends BaseActivity implements IAMain {
     }
 
 
-
     @Override
     public void setToolbarTitle(String title) {
         actionBar.setTitle(title);
