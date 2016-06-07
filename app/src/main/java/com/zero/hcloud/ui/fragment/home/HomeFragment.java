@@ -25,8 +25,8 @@ public class HomeFragment extends BaseFragment {
     TabLayout tabs;
     @InjectView(R.id.fragment_home_viewpager)
     ViewPager viewpager;
-    @InjectView(R.id.fragment_home_fab)
-    FloatingActionButton fab;
+//    @InjectView(R.id.fragment_home_fab)
+//    FloatingActionButton fab;
     HomeFragmentViewPagerAdapter adapter ;
 
 
@@ -49,9 +49,9 @@ public class HomeFragment extends BaseFragment {
 
     private void addFragment(){
         adapter=new HomeFragmentViewPagerAdapter(getActivity().getSupportFragmentManager());
-        adapter.addFragment(new GeneralFragment(),"关注");
-        adapter.addFragment(new GeneralFragment(),"AAAAA");
-        adapter.addFragment(new GeneralFragment(),"BBBBB");
+        adapter.addFragment(new GeneralFragment(),"推荐");
+        adapter.addFragment(new GeneralFragment(),"取快递");
+        adapter.addFragment(new GeneralFragment(),"取外卖");
     }
 
     //初始化tabs

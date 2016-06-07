@@ -56,8 +56,6 @@ dependencies {
     compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
     //log util
     compile 'com.orhanobut:logger:1.10'
-    //img load
-    compile 'com.facebook.fresco:fresco:0.5.2+'
     //recyclerview
     compile 'com.malinskiy:superrecyclerview:1.1.0'
     //db

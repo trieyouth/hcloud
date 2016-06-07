@@ -22,6 +22,7 @@
             android:orientation="horizontal">
 
             <com.github.siyamed.shapeimageview.CircularImageView
+                android:id="@+id/head"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
                 android:layout_marginRight="16dp"
@@ -34,12 +35,14 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="8dp"
                     android:text="青春年华" />
 
                 <TextView
+                    android:id="@+id/time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2015-11-17  14:00" />
@@ -53,6 +56,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="我有一个快递在15栋，有谁可以帮我拿一下吗？有意者联系我：18888888888" />
@@ -69,6 +73,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="奖金： 50元" />

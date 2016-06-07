@@ -11,4 +11,6 @@ public class Post {
 
     public User user;
 
+    public String money;
+
 }

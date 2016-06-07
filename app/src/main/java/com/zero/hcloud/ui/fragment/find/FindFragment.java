@@ -16,7 +16,7 @@ public class FindFragment extends BaseFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View  view  = getCententView(inflater, R.layout.fragment_about);
+        View  view  = getCententView(inflater, R.layout.fragment_find);
         return view ;
     }
 }

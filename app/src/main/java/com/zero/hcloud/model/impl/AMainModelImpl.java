@@ -68,11 +68,11 @@ public class AMainModelImpl implements IAMainModel{
 //                break;
             case R.id.drawer_attention_item:
                 //fragment = new AttentionFragment();
-                fragment = new HomeFragment();
+                fragment = new AttentionFragment();
                 break;
             case R.id.drawer_find_item:
                 //fragment = new FindFragment();
-                fragment = new HomeFragment();
+                fragment = new FindFragment();
                 break;
 //            case R.id.drawer_message_item:
 //                fragment = new MessageFragment();
